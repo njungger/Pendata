@@ -1,11 +1,31 @@
-# Welcome to your Jupyter Book
+# Mochammad Zuhair Abid Fathoni
+# NIM 200411100128
+# Penambangan Data Kelas C
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Ini adalah halaman intro saya
 
-Check out the content pages bundled with this sample book to see more.
+Garuda pancasila
+Akulah pendukungmu
+Patriot proklamasi
+Sedia berkorban untukmu
+Pancasila dasar negara
+Rakyat adil makmur sentosa
+Pribadi bangsaku
+Ayo maju maju
+Ayo maju maju
+Ayo maju maju
+Garuda pancasila
+Akulah pendukungmu
+Patriot proklamasi
+Sedia berkorban untukmu
+Pancasila dasar negara
+Rakyat adil makmur sentosa
+Pribadi bangsaku
+Ayo maju maju
+Ayo maju maju
+Ayo maju maju
+
+dibawah ini adalah Table of Content
 
 ```{tableofcontents}
 ```
