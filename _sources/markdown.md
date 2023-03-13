@@ -11,11 +11,11 @@ SciPy atau Scientific Python digunakan untuk masalah matematika, sains, dan tekn
 
 Pandas digunakan untuk manipulasi dan analisis data. Pandas menyediakan struktur data yang cepat, fleksibel dan ekspresif serta menyediakan fitur seperti penanganan data yang hilang, pengindeksan yang rumit dan penyelarasan data.Pandas menyediakan struktur data yang cepat, fleksibel, dan ekspresif yang dapat membantu developer bekerja dengan data berlabel dan relasional.
 
-SciKit-Learn
+- SciKit-Learn
 
 SciKit-Learn menampilkan algoritma klasifikasi, regresi, dan pengelompokan, termasuk DBSCAN, peningkatan gradien, mesin vektor dukungan, dan random forsts. Library yang dikembangkan oleh David Cournapeau ini berfungsi untuk menangani standard machine learning dan aplikasi penambangan data.
 
-Matplotlib
+- Matplotlib
 
 Matplotlib adalah salah satu perpustakaan paling umum di komunitas Python. Matplotlib digunakan untuk membuat visualisasi data yang statis, animasi, dan interaktif.Matplotlib menyediakan pilihan kustomisasi dan grafik yang sangat beragam. Ini memungkinkan para developer menggunakan histogram untuk menyebarkan, menyesuaikan, dan mengkonfigurasi plot. Library open-source ini menawarkan object-oriented API untuk mengintegrasikan plot ke dalam aplikasi.
 
