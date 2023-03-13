@@ -1,31 +1,30 @@
-# Mochammad Zuhair Abid Fathoni
-# NIM 200411100128
-# Penambangan Data Kelas C
+# Data Mining - Teknik Informatika 2020
+Data mining adalah proses pengumpulan dan pengolahan data yang bertujuan untuk mengekstrak informasi penting pada data. Proses pengumpulan dan ekstraksi informasi tersebut dapat dilakukan menggunakan perangkat lunak dengan bantuan perhitungan statistika, matematika, ataupun teknologi Artificial Intelligence (AI). Data mining sering disebut juga Knowledge Discovery in Database (KDD).
 
-Ini adalah halaman intro saya
+## Tujuan Data Mining
+Data mining dilakukan untuk memenuhi beberapa tujuan tertentu. Berikut ini adalah tujuan-tujuan dari data mining:
 
-Garuda pancasila
-Akulah pendukungmu
-Patriot proklamasi
-Sedia berkorban untukmu
-Pancasila dasar negara
-Rakyat adil makmur sentosa
-Pribadi bangsaku
-Ayo maju maju
-Ayo maju maju
-Ayo maju maju
-Garuda pancasila
-Akulah pendukungmu
-Patriot proklamasi
-Sedia berkorban untukmu
-Pancasila dasar negara
-Rakyat adil makmur sentosa
-Pribadi bangsaku
-Ayo maju maju
-Ayo maju maju
-Ayo maju maju
+1. Sebagai sarana menjelaskan (Explanatory)
+Data mining dapat digunakan sebagai sarana untuk menjelaskan suatu kondisi penelitian.
+2. Sebagai sarana konfirmasi (Confirmatory)
+Data mining dapat digunakan sebagai sarana untuk memastikan sebuah pernyataan atau mempertegas suatu hipotesis.
+3. Sebagai sarana eksplorasi (Exploratory)
+Data mining dapat digunakan sebagai sarana untuk mencari pola baru yang sebelumnya tidak terdeteksi.
 
-dibawah ini adalah Table of Content
+## Metode Data Mining
+Secara umum, terdapat beberapa metode yang digunakan untuk melakukan data mining. Berikut ini adalah metodenya:
 
-```{tableofcontents}
-```
+- Association
+Teknik yang pertama adalah association. Association adalah metode berbasis aturan yang digunakan untuk menemukan asosiasi dan hubungan variabel dalam satu set data. Biasanya analisis ini terdiri dari pernyataan “if atau then” sederhana. Association banyak digunakan dalam mengidentifikasi korelasi produk dalam keranjang belanja untuk memahami kebiasaan konsumsi pelanggan. Sehingga, perusahaan dapat mengembangkan strategi penjualan dan membuat sistem rekomendasi yang lebih baik.
+
+- Classification
+Selanjutnya classification, ia adalah metode yang paling umum digunakan dalam data mining. Classification adalah tindakan untuk memprediksi kelas suatu objek.
+
+- Regression
+Regression adalah teknik yang menjelaskan variabel dependen melalui proses analisis variabel independen. Sebagai contoh, prediksi penjualan suatu produk berdasarkan korelasi antara harga produk dengan tingkat pendapatan rata-rata pelanggan.
+
+- Clustering
+Terakhir, metode clustering. Clustering digunakan dalam membagi kumpulan data menjadi beberapa kelompok berdasarkan kemiripan atribut yang dimiliki. Contoh kasusnya adalah Customer Segmentation. Ia membagi pelanggan ke dalam beberapa grup berdasarkan tingkat kemiripannya.
+
+## Kesimpulan
+Berdasarkan uraian di atas, data mining adalah proses pengumpulan dan pengolahan data yang bertujuan untuk mengekstrak informasi penting pada data. Data mining memiliki tiga tujuan yaitu sebagai sarana untuk menjelaskan atau explanatory, untuk konfirmasi atau confirmatory, dan untuk eksplorasi atau exploratory. Ia juga memiliki beberapa metode seperti Association, Classification, Regression, dan Clustering.
