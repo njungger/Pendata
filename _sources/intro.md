@@ -7,9 +7,11 @@ Data mining dilakukan untuk memenuhi beberapa tujuan tertentu. Berikut ini adala
 1. Sebagai sarana menjelaskan (Explanatory)
 
 Data mining dapat digunakan sebagai sarana untuk menjelaskan suatu kondisi penelitian.
+
 2. Sebagai sarana konfirmasi (Confirmatory)
 
 Data mining dapat digunakan sebagai sarana untuk memastikan sebuah pernyataan atau mempertegas suatu hipotesis.
+
 3. Sebagai sarana eksplorasi (Exploratory)
 
 Data mining dapat digunakan sebagai sarana untuk mencari pola baru yang sebelumnya tidak terdeteksi.
