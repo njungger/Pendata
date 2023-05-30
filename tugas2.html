@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas UTS" href="UTS.html" />
+    <link rel="next" title="Implementasi Decision Tree" href="tugas3.html" />
     <link rel="prev" title="Tugas Menghitung Jarak Antar Data" href="tugas1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -163,6 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tugas1.html">Tugas Menghitung Jarak Antar Data</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementasi Naive Bayes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3.html">Implementasi Decision Tree</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">Tugas UTS</a></li>
 
 </ul>
@@ -382,7 +383,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d2889aa1-a71c-4a85-8d48-2084aa9daf15">
+  <div id="df-6b6e0a58-d954-4ca9-89ac-f8e128f89a23">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -453,7 +454,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d2889aa1-a71c-4a85-8d48-2084aa9daf15')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6b6e0a58-d954-4ca9-89ac-f8e128f89a23')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -504,12 +505,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d2889aa1-a71c-4a85-8d48-2084aa9daf15 button.colab-df-convert');
+          document.querySelector('#df-6b6e0a58-d954-4ca9-89ac-f8e128f89a23 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d2889aa1-a71c-4a85-8d48-2084aa9daf15');
+          const element = document.querySelector('#df-6b6e0a58-d954-4ca9-89ac-f8e128f89a23');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -530,6 +531,7 @@ document.write(`
   </div>
   </div></div>
 </div>
+<p>split data untuk data train dan data test</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -538,6 +540,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>scaling fitur agar skala pada semua data sama</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
@@ -548,6 +551,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>import model naive bayes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
@@ -559,6 +563,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GaussianNB()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">GaussianNB</label><div class="sk-toggleable__content"><pre>GaussianNB()</pre></div></div></div></div></div></div></div>
 </div>
+<p>prediksi model dengan data x_test</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
@@ -567,19 +572,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-virginica&#39;, &#39;Iris-setosa&#39;,
-       &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;,
-       &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;,
-       &#39;Iris-virginica&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-virginica&#39;,
-       &#39;Iris-virginica&#39;, &#39;Iris-virginica&#39;, &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;,
-       &#39;Iris-virginica&#39;, &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;,
-       &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-setosa&#39;,
-       &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;,
-       &#39;Iris-versicolor&#39;], dtype=&#39;&lt;U15&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;,
+       &#39;Iris-virginica&#39;, &#39;Iris-virginica&#39;, &#39;Iris-virginica&#39;,
+       &#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;,
+       &#39;Iris-virginica&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;,
+       &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;,
+       &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-setosa&#39;,
+       &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;,
+       &#39;Iris-versicolor&#39;, &#39;Iris-virginica&#39;, &#39;Iris-virginica&#39;,
+       &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-virginica&#39;], dtype=&#39;&lt;U15&#39;)
 </pre></div>
 </div>
 </div>
 </div>
+<p>hitung akurarsi prediksi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
@@ -594,13 +600,14 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy :  1.0
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[13,  0,  0],
-       [ 0,  8,  0],
-       [ 0,  0,  9]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[10,  0,  0],
+       [ 0,  9,  0],
+       [ 0,  0, 11]])
 </pre></div>
 </div>
 </div>
 </div>
+<p>membandingkan langsung hasil data test dan prediksi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Real Values&#39;</span><span class="p">:</span><span class="n">y_test</span><span class="p">,</span> <span class="s1">&#39;Predicted Values&#39;</span><span class="p">:</span><span class="n">y_pred</span><span class="p">})</span>
@@ -610,7 +617,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bebf49bc-63d0-4c81-9053-178420881373">
+  <div id="df-58cf6691-477d-4e79-aa1f-a87e7c1a5d3d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -642,38 +649,38 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>8</th>
@@ -702,38 +709,38 @@ document.write(`
     </tr>
     <tr>
       <th>13</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>20</th>
@@ -742,53 +749,53 @@ document.write(`
     </tr>
     <tr>
       <th>21</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>23</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>26</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>28</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>29</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bebf49bc-63d0-4c81-9053-178420881373')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-58cf6691-477d-4e79-aa1f-a87e7c1a5d3d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -839,12 +846,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bebf49bc-63d0-4c81-9053-178420881373 button.colab-df-convert');
+          document.querySelector('#df-58cf6691-477d-4e79-aa1f-a87e7c1a5d3d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bebf49bc-63d0-4c81-9053-178420881373');
+          const element = document.querySelector('#df-58cf6691-477d-4e79-aa1f-a87e7c1a5d3d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -908,11 +915,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="UTS.html"
+       href="tugas3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas UTS</p>
+        <p class="prev-next-title">Implementasi Decision Tree</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

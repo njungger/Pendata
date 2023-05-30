@@ -394,7 +394,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Memisahkan baris species</p>
+<p>Memisahkan data x dan data y. data x untuk data dengan hanya berisi kolom fitur dan data y hanya berisi label data perbaris</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -403,11 +403,10 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Memisahkan data training dan data testing</p>
+<p>Memisahkan data training dan data testing (80:20)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># splitting the data into training and test sets (80:20)</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="n">X_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -439,11 +438,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8e7223f724f874d669791568082052c9a9680bf981527af504245aef55d97b16.svg" src="_images/8e7223f724f874d669791568082052c9a9680bf981527af504245aef55d97b16.svg" /></div>
+<img alt="_images/a03038d38b8a5d2fef6cff755c41f0c13a0ccbf12078465983633450543d13ef.svg" src="_images/a03038d38b8a5d2fef6cff755c41f0c13a0ccbf12078465983633450543d13ef.svg" /></div>
 </div>
 </div>
 <div class="section" id="test-prediksi-model">
 <h2>Test prediksi model<a class="headerlink" href="#test-prediksi-model" title="Permalink to this heading">#</a></h2>
+<p>prediksi model dengan data x_test</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_predic</span> <span class="o">=</span> <span class="n">d3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -465,6 +465,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>menampilkan hasil label pada kolom spesies dan hasil prediksi model</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_predic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_predic</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Predict&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -474,7 +475,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4120d0be-7970-4660-9ee8-a8855d0d2843">
+  <div id="df-65532357-2fe5-4a53-9691-c5a69d3505cc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -652,7 +653,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4120d0be-7970-4660-9ee8-a8855d0d2843')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-65532357-2fe5-4a53-9691-c5a69d3505cc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -703,12 +704,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4120d0be-7970-4660-9ee8-a8855d0d2843 button.colab-df-convert');
+          document.querySelector('#df-65532357-2fe5-4a53-9691-c5a69d3505cc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4120d0be-7970-4660-9ee8-a8855d0d2843');
+          const element = document.querySelector('#df-65532357-2fe5-4a53-9691-c5a69d3505cc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -729,6 +730,7 @@ document.write(`
   </div>
   </div></div>
 </div>
+<p>cari pasangan hasil data yang sama dari perbandingan hasil test dan kolom species</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correct</span> <span class="o">=</span> <span class="n">data_predic</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_predic</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">data_predic</span><span class="p">[</span><span class="s2">&quot;Predict&quot;</span><span class="p">]]</span>
@@ -736,6 +738,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>hitung akurasi hasil prediksi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
