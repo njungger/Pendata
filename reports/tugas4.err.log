@@ -15,14 +15,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-activation = sum(weight_i * input_i) + bias
+inisialisasi bobot dengan acak
 ------------------
 
 
-[0;31m[0m
-[0;31mNameError[0mTraceback (most recent call last)
-[0;32m<ipython-input-2-defed98f57f4>[0m in [0;36m<cell line: 1>[0;34m()[0m
-[0;32m----> 1[0;31m [0mactivation[0m [0;34m=[0m [0msum[0m[0;34m([0m[0mweight_i[0m [0;34m*[0m [0minput_i[0m[0;34m)[0m [0;34m+[0m [0mbias[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mNameError[0m: name 'weight_i' is not defined
+[0;36m  File [0;32m"<ipython-input-3-3ff54d6a34ac>"[0;36m, line [0;32m1[0m
+[0;31m    inisialisasi bobot dengan acak[0m
+[0m                 ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
 
